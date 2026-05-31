@@ -20,7 +20,7 @@ updateClock();
 
 const panel =
 document.getElementById("settingPanel");
-panel.style.display="block";
+
 function saveSettings(){
 
 localStorage.setItem(
@@ -180,16 +180,18 @@ location.reload();
 }
 },60000);
 
+const panel =
+document.getElementById("settingPanel");
 const PASSWORD = "123456";
-document
-.getElementById("settingBtn")
+document.getElementById("settingBtn")
 .addEventListener("click",()=>{
 const pass =
 prompt("Masukkan Password");
-if(pass===PASSWORD){
-panel.style.display=
-panel.style.display==="block"
-?"none":"block";
+if(pass === PASSWORD){
+panel.style.display =
+panel.style.display === "block"
+? "none"
+: "block";
 }else{
 alert("Password salah");
 }
