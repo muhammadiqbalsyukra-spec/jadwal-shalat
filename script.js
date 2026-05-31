@@ -20,7 +20,7 @@ updateClock();
 
 const panel =
 document.getElementById("settingPanel");
-
+panel.style.display="block";
 function saveSettings(){
 
 localStorage.setItem(
