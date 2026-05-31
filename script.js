@@ -21,16 +21,6 @@ updateClock();
 const panel =
 document.getElementById("settingPanel");
 
-document.getElementById("settingBtn")
-.onclick = () => {
-
-panel.style.display =
-panel.style.display === "block"
-? "none"
-: "block";
-
-};
-
 function saveSettings(){
 
 localStorage.setItem(
