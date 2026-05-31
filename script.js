@@ -155,7 +155,6 @@ reader.readAsDataURL(file);
 });
 
 function updateNextPrayer(){
-
 const prayers = [
 ["Subuh",document.getElementById("subuh").innerHTML],
 ["Dzuhur",document.getElementById("dzuhur").innerHTML],
@@ -163,11 +162,11 @@ const prayers = [
 ["Maghrib",document.getElementById("maghrib").innerHTML],
 ["Isya",document.getElementById("isya").innerHTML]
 ];
-
 const now = new Date();
+let found = false;
 for(let p of prayers){
 let target = new Date();
-const parts = p[1].split(":");
+let parts = p[1].split(":");
 target.setHours(parts[0]);
 target.setMinutes(parts[1]);
 target.setSeconds(0);
@@ -188,10 +187,43 @@ document.getElementById("nextPrayer")
 document.getElementById("countdown")
 .innerHTML =
 `${h}:${m}:${s}`;
+found = true;
 break;
 }
 }
+if(!found){
+let subuh =
+document.getElementById("subuh")
+.innerHTML
+.split(":");
+
+let target =
+new Date();
+target.setDate(
+target.getDate()+1
+);
+target.setHours(subuh[0]);
+target.setMinutes(subuh[1]);
+target.setSeconds(0);
+let diff =
+Math.floor((target-now)/1000);
+let h =
+String(Math.floor(diff/3600))
+.padStart(2,"0");
+let m =
+String(Math.floor((diff%3600)/60))
+.padStart(2,"0");
+let s =
+String(diff%60)
+.padStart(2,"0");
+document.getElementById("nextPrayer")
+.innerHTML = "Subuh";
+document.getElementById("countdown")
+.innerHTML =
+`${h}:${m}:${s}`;
 }
+}
+
 setInterval(updateNextPrayer,1000);
 setInterval(()=>{
 if(!navigator.onLine){
