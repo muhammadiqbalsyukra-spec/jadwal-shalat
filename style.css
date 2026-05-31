@@ -19,11 +19,23 @@ object-fit:contain;
 }
 
 .clock{
-font-size:90px;
-text-align:center;
+font-size:110px;
 font-weight:bold;
+text-align:center;
+color:#00ff88;
+text-shadow:
+0 0 10px #00ff88,
+0 0 20px #00ff88,
+0 0 40px #00ff88;
 }
 
+background:
+linear-gradient(
+135deg,
+#04111d,
+#082032,
+#0b2447
+);
 .date{
 text-align:center;
 font-size:24px;
@@ -100,4 +112,12 @@ right:70px;
 font-size:24px;
 cursor:pointer;
 z-index:999;
+}
+
+:root{
+--theme:#00ff88;
+}
+
+.clock{
+color:var(--theme);
 }
