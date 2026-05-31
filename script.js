@@ -96,20 +96,6 @@ document.getElementById("maghrib").innerHTML =
 localStorage.getItem("maghrib") || "18:00";
 document.getElementById("isya").innerHTML =
 localStorage.getItem("isya") || "19:15";
- document.getElementById("subuhBox").innerHTML =
-document.getElementById("subuh").innerHTML;
-
-document.getElementById("dzuhurBox").innerHTML =
-document.getElementById("dzuhur").innerHTML;
-
-document.getElementById("asharBox").innerHTML =
-document.getElementById("ashar").innerHTML;
-
-document.getElementById("maghribBox").innerHTML =
-document.getElementById("maghrib").innerHTML;
-
-document.getElementById("isyaBox").innerHTML =
-document.getElementById("isya").innerHTML;
 }
 loadSettings();
 
