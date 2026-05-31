@@ -221,3 +221,7 @@ document.documentElement
 }
 };
 
+document.getElementById("closePanel")
+.addEventListener("click",()=>{
+panel.style.display="none";
+});
