@@ -20,7 +20,7 @@ updateClock();
 
 const panel =
 document.getElementById("settingPanel");
-
+console.log("SCRIPT BERJALAN")
 function saveSettings(){
 
 localStorage.setItem(
@@ -221,14 +221,3 @@ document.documentElement
 }
 };
 
-localStorage.setItem(
-"theme",
-document.getElementById("themeColor").value
-);
-
-document.documentElement
-.style.setProperty(
-"--theme",
-localStorage.getItem("theme")
-||"#00ff88"
-);
