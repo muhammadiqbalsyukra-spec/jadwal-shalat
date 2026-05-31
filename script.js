@@ -183,13 +183,13 @@ location.reload();
 const PASSWORD = "123456";
 document.getElementById("settingBtn")
 .addEventListener("click",()=>{
-const pass =
-prompt("Masukkan Password");
+if(panel.style.display === "block"){
+panel.style.display = "none";
+return;
+}  
+const pass = prompt("Masukkan Password");
 if(pass === PASSWORD){
-panel.style.display =
-panel.style.display === "block"
-? "none"
-: "block";
+panel.style.display = "block";
 }else{
 alert("Password salah");
 }
