@@ -68,7 +68,15 @@ document.getElementById("runningText")
 .innerHTML =
 localStorage.getItem("text")
 || "Selamat datang di Masjid";
-
 }
-
 loadSettings();
+
+document
+.getElementById("fullscreenBtn")
+.addEventListener("click",()=>{
+if(!document.fullscreenElement){
+document.documentElement.requestFullscreen();
+}else{
+document.exitFullscreen();
+}
+});
