@@ -21,6 +21,7 @@ margin-right:15px;
 }
 
 .clock{
+text-align:center;
 font-size:110px;
 font-weight:bold;
 color:#6dffb3;
@@ -84,18 +85,23 @@ z-index:999;
 
 .led-text{
 white-space:nowrap;
-font-size:24px;
+font-size:26px;
 font-weight:bold;
 color:white;
+text-shadow:
+0 0 5px #fff,
+0 0 10px #00ff88,
+0 0 20px #00ff88;
+
 padding-left:100%;
-animation:jalan 25s linear infinite;
+animation:jalan 35s linear infinite;
 }
 @keyframes jalan{
 0%{
 transform:translateX(0);
 }
 100%{
-transform:translateX(-200%);
+transform:translateX(-100%);
 }
 }
 
@@ -222,11 +228,11 @@ transform:scale(1);
 
 .info-panel{
 position:absolute;
-left:40px;
+left:30px;
 top:180px;
-width:260px;
+width:250px;
 padding:20px;
-background:rgba(255,255,255,.05);
+background:rgba(255,255,255,.08);
 border-radius:15px;
-backdrop-filter:blur(10px);
+backdrop-filter:blur(8px);
 }
