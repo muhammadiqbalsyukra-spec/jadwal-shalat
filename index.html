@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal Shalat Digital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <img id="logo" src="logo.png" alt="Logo">
+    <div>
+        <h1 id="namaMasjid">MASJID CONTOH</h1>
+        <p id="lokasi">Kota / Kabupaten</p>
+    </div>
+</div>
+
+<div class="clock" id="clock">00:00:00</div>
+<div class="date" id="date">Tanggal</div>
+
+<div class="content">
+
+    <div class="jadwal">
+        <h2>Jadwal Shalat</h2>
+
+        <div class="row">
+            <span>Subuh</span>
+            <span id="subuh">04:30</span>
+        </div>
+
+        <div class="row">
+            <span>Dzuhur</span>
+            <span id="dzuhur">12:00</span>
+        </div>
+
+        <div class="row">
+            <span>Ashar</span>
+            <span id="ashar">15:30</span>
+        </div>
+
+        <div class="row">
+            <span>Maghrib</span>
+            <span id="maghrib">18:00</span>
+        </div>
+
+        <div class="row">
+            <span>Isya</span>
+            <span id="isya">19:15</span>
+        </div>
+    </div>
+
+    <div class="countdown">
+        <h2>Shalat Berikutnya</h2>
+        <h1 id="nextPrayer">Maghrib</h1>
+        <div id="countdown">00:00:00</div>
+    </div>
+
+</div>
+
+<div class="marquee">
+    <marquee id="runningText">
+        Selamat datang di Masjid
+    </marquee>
+</div>
+
+<button id="settingBtn">⚙️</button>
+
+<div id="settingPanel" class="panel">
+
+    <h2>Pengaturan</h2>
+
+    <input type="text" id="inputNamaMasjid" placeholder="Nama Masjid">
+
+    <input type="text" id="inputLokasi" placeholder="Kota/Kabupaten">
+
+    <textarea id="inputText" placeholder="Running Text"></textarea>
+
+    <button onclick="saveSettings()">Simpan</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
