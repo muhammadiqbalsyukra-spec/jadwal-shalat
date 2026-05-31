@@ -180,8 +180,6 @@ location.reload();
 }
 },60000);
 
-const panel =
-document.getElementById("settingPanel");
 const PASSWORD = "123456";
 document.getElementById("settingBtn")
 .addEventListener("click",()=>{
