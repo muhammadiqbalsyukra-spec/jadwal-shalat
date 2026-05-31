@@ -215,10 +215,7 @@ if(indexPengumuman>=data.length){
 indexPengumuman=0;
 }
 }
-setInterval(
-rotatePengumuman,
-10000
-);
+
 window.onload=()=>{
 if(localStorage.getItem("autoFullscreen")=="yes"){
 document.documentElement
