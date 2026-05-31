@@ -184,6 +184,31 @@ String(diff%60)
 .padStart(2,"0");
 document.getElementById("nextPrayer")
 .innerHTML = p[0];
+ document
+.querySelectorAll(".neon-box")
+.forEach(box=>{
+box.classList.remove("active-prayer");
+});
+if(p[0]=="Subuh"){
+document.getElementById("boxSubuh")
+.classList.add("active-prayer");
+}
+if(p[0]=="Dzuhur"){
+document.getElementById("boxDzuhur")
+.classList.add("active-prayer");
+}
+if(p[0]=="Ashar"){
+document.getElementById("boxAshar")
+.classList.add("active-prayer");
+}
+if(p[0]=="Maghrib"){
+document.getElementById("boxMaghrib")
+.classList.add("active-prayer");
+}
+if(p[0]=="Isya"){
+document.getElementById("boxIsya")
+.classList.add("active-prayer");
+}
 document.getElementById("countdown")
 .innerHTML =
 `${h}:${m}:${s}`;
@@ -218,6 +243,13 @@ String(diff%60)
 .padStart(2,"0");
 document.getElementById("nextPrayer")
 .innerHTML = "Subuh";
+ document
+.querySelectorAll(".neon-box")
+.forEach(box=>{
+box.classList.remove("active-prayer");
+});
+document.getElementById("boxSubuh")
+.classList.add("active-prayer");
 document.getElementById("countdown")
 .innerHTML =
 `${h}:${m}:${s}`;
