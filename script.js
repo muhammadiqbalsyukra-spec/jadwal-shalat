@@ -230,3 +230,15 @@ document.documentElement
 .requestFullscreen();
 }
 };
+
+localStorage.setItem(
+"theme",
+document.getElementById("themeColor").value
+);
+
+document.documentElement
+.style.setProperty(
+"--theme",
+localStorage.getItem("theme")
+||"#00ff88"
+);
