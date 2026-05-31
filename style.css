@@ -85,13 +85,13 @@ z-index:999;
 
 .led-text{
 white-space:nowrap;
-font-size:26px;
+font-size:28px;
 font-weight:bold;
 color:white;
 text-shadow:
 0 0 5px #fff,
-0 0 10px #00ff88,
-0 0 20px #00ff88;
+0 0 8px #00ff88,
+0 0 16px #00ff88;
 
 padding-left:100%;
 animation:jalan 35s linear infinite;
