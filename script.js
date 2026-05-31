@@ -35,6 +35,11 @@ localStorage.setItem(
 "text",
 document.getElementById("inputText").value
 );
+ localStorage.setItem(
+"pengumuman",
+document.getElementById("inputText").value
+);
+  
 loadSettings();
   localStorage.setItem(
 "subuh",
