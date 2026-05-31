@@ -92,3 +92,12 @@ width:100%;
 margin-bottom:10px;
 padding:10px;
 }
+
+#fullscreenBtn{
+position:fixed;
+top:20px;
+right:70px;
+font-size:24px;
+cursor:pointer;
+z-index:999;
+}
