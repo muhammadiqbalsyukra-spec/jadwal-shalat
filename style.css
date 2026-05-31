@@ -68,13 +68,34 @@ font-size:60px;
 font-weight:bold;
 }
 
-.marquee{
+.led-bar{
 position:fixed;
 bottom:0;
+left:0;
 width:100%;
-background:#00a86b;
-padding:10px;
+height:50px;
+background:#00cfa5;
+overflow:hidden;
+display:flex;
+align-items:center;
+z-index:999;
+}
+
+.led-text{
+white-space:nowrap;
 font-size:24px;
+font-weight:bold;
+color:white;
+padding-left:100%;
+animation:jalan 25s linear infinite;
+}
+@keyframes jalan{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-200%);
+}
 }
 
 #settingBtn{
