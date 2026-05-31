@@ -184,3 +184,49 @@ break;
 }
 }
 setInterval(updateNextPrayer,1000);
+setInterval(()=>{
+if(!navigator.onLine){
+location.reload();
+}
+},60000);
+
+const PASSWORD = "123456";
+document
+.getElementById("settingBtn")
+.addEventListener("click",()=>{
+const pass =
+prompt("Masukkan Password");
+if(pass===PASSWORD){
+panel.style.display=
+panel.style.display==="block"
+?"none":"block";
+}else{
+alert("Password salah");
+}
+});
+
+let indexPengumuman = 0;
+function rotatePengumuman(){
+const data =
+(localStorage.getItem("pengumuman")
+||"Selamat Datang")
+.split("|");
+document
+.getElementById("runningText")
+.innerHTML =
+data[indexPengumuman];
+indexPengumuman++;
+if(indexPengumuman>=data.length){
+indexPengumuman=0;
+}
+}
+setInterval(
+rotatePengumuman,
+10000
+);
+window.onload=()=>{
+if(localStorage.getItem("autoFullscreen")=="yes"){
+document.documentElement
+.requestFullscreen();
+}
+};
